@@ -30,4 +30,3 @@ jobs:
 
       - name: Run molecule tests
         run: molecule test
-
