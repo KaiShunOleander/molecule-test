@@ -4,12 +4,10 @@ dependency:
 driver:
   name: docker
 lint: |
-  set -e
   yamllint .
-  ansible-lint .
 platforms:
   - name: molecule_apache
-    image: geerlingguy/docker-${MOLECULE_DISTRO:-centos8}-ansible:latest
+    image: geerlingguy/docker-${MOLECULE_DISTRO:-ubuntu2004}-ansible:latest
     command: ""
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
