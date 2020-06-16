@@ -1,0 +1,7 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify apache is serving web requests
+  uri:
+    url: http://localhost/
+    staus_code: 200
