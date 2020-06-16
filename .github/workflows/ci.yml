@@ -30,3 +30,7 @@ jobs:
 
       - name: Run molecule tests
         run: molecule test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORECE_COLORS: '1'
+          MOLECULE_DISTRO: $(( matrix_distro))
