@@ -3,8 +3,8 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint:
-  name: yamllint
+lint: |
+  yamllint .
 platforms:
   - name: molecule_apache
     image: geerlingguy/docker-${MOLECULE_DISTRO:-ubuntu2004}-ansible:latest
@@ -15,8 +15,6 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
 
 
 scenario:
